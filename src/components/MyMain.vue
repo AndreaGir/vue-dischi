@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <div class="dentromain">
-            <ListaCd />
+            <ListaCd class="carta" />
         </div>
 
     </div>
@@ -29,7 +29,7 @@ export default {
 }
 .main{
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.781);
@@ -39,6 +39,11 @@ export default {
     height: 80%;
     border: 1px solid red;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.carta {
+    max-width: 18%;
 }
 
 </style>

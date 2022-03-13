@@ -1,10 +1,8 @@
 <template>
     <div>
 
-        <div v-for="(dischi,i) in album" :key="i"> 
-            {{dischi.title}}
-            
-        </div>
+        <albums v-for="(dischi,i) in album" :key="i" :albums="dischi">    
+        </albums>
 
     </div>
 </template>
@@ -13,7 +11,12 @@
 <script>
 import axios from 'axios'
 
+import albums from './dischiAlbum.vue'
+
 export default {
+    components:{
+        albums,
+    },
     data() {
         return {
             album: []
